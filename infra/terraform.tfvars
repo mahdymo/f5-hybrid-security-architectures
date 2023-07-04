@@ -7,7 +7,7 @@ aws_region     = "us-east-1"
 azs           = ["us-east-1a"]
 
 #Assets
-nic = true
+nic = false
 nap = false
 bigip = true
 bigip-cis = false
