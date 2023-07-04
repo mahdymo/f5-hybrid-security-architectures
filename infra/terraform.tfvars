@@ -4,7 +4,7 @@ resource_owner = "mmahdy"
 
 #AWS INFRA
 aws_region     = "us-west-2"
-azs           = ["us-west-2a"]
+azs           = ["us-west-2a", "us-west-2b"]
 
 #Assets
 nic = false
