@@ -223,3 +223,8 @@ variable "cis_config_payload" {
 variable "juice_shop_ip" {
   default = null
 }
+
+variable "bigip_k8s_partition" {
+    type        = string
+    description = "the partition (AS3 tenant) in which the ingress virtual servers will be created"
+}
