@@ -3,8 +3,8 @@ project_prefix = "xc_bigip_apm"
 resource_owner = "mmahdy"
 
 #AWS INFRA
-aws_region     = "us-east-1"
-azs           = ["us-east-1a"]
+aws_region     = "us-west-2"
+azs           = ["us-west-2a"]
 
 #Assets
 nic = false
