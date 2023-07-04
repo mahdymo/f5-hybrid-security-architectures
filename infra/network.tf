@@ -61,7 +61,7 @@ AZ2 = 10.0.16.0/20
 }
 
 resource "aws_subnet" "internal" {
-  for_each = toset(var.cidr)
+  for_each = toset(var.azs)
   vpc_id            = module.vpc.vpc_id
   cidr_block        = module.subnet_addrs[each.key].network_cidr_blocks["internal"]
   availability_zone = each.key
@@ -70,7 +70,7 @@ resource "aws_subnet" "internal" {
   }
 }
 resource "aws_subnet" "management" {
-  for_each = toset(var.cidr)
+  for_each = toset(var.azs)
   vpc_id            = module.vpc.vpc_id
   cidr_block        = module.subnet_addrs[each.key].network_cidr_blocks["management"]
   availability_zone = each.key
@@ -79,7 +79,7 @@ resource "aws_subnet" "management" {
   }
 }
 resource "aws_subnet" "external" {
-  for_each = toset(var.cidr)
+  for_each = toset(var.azs)
   vpc_id            = module.vpc.vpc_id
   cidr_block        = module.subnet_addrs[each.key].network_cidr_blocks["external"]
   map_public_ip_on_launch = true
