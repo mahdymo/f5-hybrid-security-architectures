@@ -7,7 +7,7 @@ module "postbuild-config-cis" {
   bigip_address    = module.bigip.mgmtPublicIP
   bigip_as3_payload = templatefile(var.cis_config_payload,
   {
-  bigip_k8s_partition = local.bigip_k8s_partition
+  bigip_k8s_partition = var.bigip_k8s_partition
   }
   )
 }
